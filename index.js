@@ -35,7 +35,7 @@ function insertNewRecord(data) {
 
 //EDIT
 function onEdit(td) {
-  selectedRow = td.parentElement.parentElement
+  selectedRow = td.parentElement.parentElement;
   document.getElementById("productCode").value = selectedRow.cells[0].innerHTML;
   document.getElementById("product").value = selectedRow.cells[1].innerHTML;
   document.getElementById("qty").value = selectedRow.cells[2].innerHTML;
@@ -44,9 +44,17 @@ function onEdit(td) {
 
 //UPDATE
 function updateRecord(formData) {
-  selectedRow.cells[0].innerHTML = formData.productCode
-  selectedRow.cells[1].innerHTML = formData.product
-  selectedRow.cells[2].innerHTML = formData.qty
-  selectedRow.cells[3].innerHTML = formData.price
+  selectedRow.cells[0].innerHTML = formData.productCode;
+  selectedRow.cells[1].innerHTML = formData.product;
+  selectedRow.cells[2].innerHTML = formData.qty;
+  selectedRow.cells[3].innerHTML = formData.price;
+}
 
+//DELETE
+function onDelete(td) {
+  if (confirm(`Do you want to delete this record?`)) {
+    row = td.parentElement.parentElement;
+    document.getElementById("storeList").deleteRow(row.rowIndex);
+  }
+  resetForm();
 }
