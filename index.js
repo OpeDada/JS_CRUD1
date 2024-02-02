@@ -58,3 +58,12 @@ function onDelete(td) {
   }
   resetForm();
 }
+
+//RESET FORM
+function resetForm() {
+  document.getElementById('productCode').value = "";
+  document.getElementById('product').value = "";
+  document.getElementById('qty').value = "";
+  document.getElementById('perPrice').value = "";
+
+}
