@@ -10,7 +10,7 @@
   <table>
     <tr>
       <td>
-        <form autocomplete="off" onsubmit="onFormSubmit()">
+        <form  onsubmit="onFormSubmit(event)">
           <div>
             <label for="productCode">Product Code</label>
             <input type="text" name="productCode" id="productCode">
@@ -20,12 +20,12 @@
             <input type="text" name="product" id="product">
           </div>
           <div>
-            <label for="qty">Quantity</label>
+            <label for="qty">Qty</label>
             <input type="number" name="qty" id="qty">
           </div>
           <div>
-            <label for="price">Price</label>
-            <input type="number" name="price" id="price">
+            <label for="perPrice">Price</label>
+            <input type="number" name="perPrice" id="perPrice">
           </div>
           <div class="form_action--button">
             <input type="submit" value="Submit">
